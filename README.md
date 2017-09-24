@@ -1,12 +1,12 @@
 # Semantic Segmentation
 
 In this project, I have labelled the pixels of a road in images using a Fully Convolutional Network (FCN). 
-I've used the pretrained vgg16 model and trained the model to learn the correct features from the images. 
+I've used the VGG-16 model and trained the model to learn the correct features from the images. 
 I have replaced fully connected layers with the 1x1 convolutional layers then added up-sampling by using transposed convolutional layers and 
-skip connections to get better segmenatation results. I have tuned hyperparameters to optimize the neural network model. 
-I have set the number of epochs and batch sizes to 100 and 5 respectively.
-While training the model,I have observed decreased loss over time. 
-Once the model built,it has generated inference images on Kitti Road dataset with correct label.
+implemented the skip-layer architecture to get better segmenatation results. I have tuned hyperparameters to optimize the neural network model. 
+I have set the number of epochs to 100, batch sizes to 5 and low learning rate 1e-4.
+While training the model,I have observed decreased loss over time. Once the model built,the classifier has done a pretty good job identifying road pixels. 
+it has generated inference images on Kitti Road dataset with correct label.
 
 ![a01](./runs/a01.png)
 
@@ -26,7 +26,7 @@ Once the model built,it has generated inference images on Kitti Road dataset wit
 
 ![a8](./runs/a8.png)
 
-Image : The loss of the network while the network is training - 
+Image : The loss decreased during training - 
 
 
 ![trainingLoss](./networkTraining.png)
